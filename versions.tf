@@ -8,10 +8,6 @@ terraform {
       source  = "cyrilgdn/postgresql"
       version = "1.25.0"
     }
-    null = {
-      source  = "hashicorp/null"
-      version = "3.2.3"
-    }
   }
   required_version = ">= 0.13"
 }

@@ -18,23 +18,6 @@ module "cloud_postgresql_admin" {
   instance_user     = "postgres"
   instance_password = "password"
   
-  schema_role_types = {
-    "admin" = {
-      privileges = {
-        schema   = [],
-        table    = [],
-        sequence = []
-      }
-    }
-    "reader" = {
-      privileges = {
-        schema   = ["USAGE"],
-        table    = ["SELECT"],
-        sequence = ["USAGE", "SELECT"]
-      }
-    }
-  }
-  
   database_schemas = {
     "finance" = [
       "user",
